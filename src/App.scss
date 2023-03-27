@@ -1,0 +1,43 @@
+@import './GlobalStyles/index';
+@import 'GlobalStyles/Themes';
+
+body {
+    margin: 0;
+    @include font-mantel-serif;
+}
+
+.tile {
+    @include border();
+    @include border-radius();
+    @include transition-all;
+}
+
+.tile-selected {
+    @include scale;
+}
+
+.tile-interactive {
+    @include transition-all;
+    &:hover {
+        @include scale;
+        cursor: pointer;
+    }
+}
+
+@each $theme, $values in $themes {
+    .default-tile---#{$theme} {
+        @include gradient(map-get($values, "primary-rgba"), map-get($values, "secondary-rgba"));
+    }
+}
+
+.reserved-tile {
+    @include gradient(rgba($color-reserved-primary, 1), rgba($color-reserved-secondary, 1));
+}
+
+.occupied-tile {
+    @include gradient(rgba($color-occupied-primary, 1), rgba($color-occupied-secondary, 1));
+}
+
+.centered {
+    margin: auto;
+}

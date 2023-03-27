@@ -1,0 +1,90 @@
+@import "../../../GlobalStyles/index";
+
+.form-form-container {
+    background: var(--main-color);
+    margin: 2vh 0;
+    padding: 4vh;
+    display: flex;
+    @mix
+}
+
+.single-form-input-container {
+    position: relative;
+    margin: 30px;
+}
+
+.single-form-input-container select,
+.single-form-input-container input[type=text] {
+    position: relative;;
+    font-family: 'Martel', serif;
+    min-width: 20vw;
+    transition: 0.5s;
+    font-size: 1em;
+    padding: 0.4em;
+    border: 2px solid #111111;
+    background: var(--light-color);
+    border-radius: 5px;
+    outline: none;
+    z-index: 20;
+}
+
+.single-form-input-container select,
+.single-form-input-container input[type=text]:valid,
+.single-form-input-container input[type=text]:focus {
+    border: 2px solid var(--focus-color);
+}
+
+.single-form-input-container label {
+    transition: 0.5s;
+    position: absolute;
+    left: 0;
+    padding: calc(0.4em + 2px);
+    pointer-events: none;
+    font-size: 1em;
+    color: #555555;
+    z-index: 30;
+}
+
+.single-form-input-container select ~ label,
+.single-form-input-container input[type=text]:valid ~ label,
+.single-form-input-container input[type=text]:focus ~ label
+{
+    color: var(--focus-color);
+    top: 0;
+    transform: translateY(calc(-100% + 2px)) translateX(5px);
+    font-size: 0.75em;
+    padding: 0 12px;
+    background: var(--light-color);
+    border-radius: 5px 5px 0 0;
+    border-top: var(--focus-color) solid 2px;
+    border-left: var(--focus-color) solid 2px;
+    border-right: var(--focus-color) solid 2px;
+    z-index: 10;
+}
+
+.form-input-with-error {
+    border-color: var(--error-color);
+}
+
+.single-form-input-container .form-input-errors {
+    max-width: 85%;
+    color: var(--error-color);
+    position: absolute;
+    bottom: 0;
+    transform: translateY(calc(100% - 2px)) translateX(5px);
+    font-size: 0.6em;
+    padding: 0 12px;
+    background: var(--light-color);
+    border-radius: 0 0 5px 5px;
+    transition: 0.5s;
+    border-bottom: var(--error-color) solid 2px;
+    border-left: var(--error-color) solid 2px;
+    border-right: var(--error-color) solid 2px;
+    z-index: 10;
+}
+
+.single-form-input-container input[type=text]:valid ~ .form-input-errors,
+.single-form-input-container input[type=text]:focus ~ .form-input-errors,
+.single-form-input-container .form-hidden-errors {
+    transform: translateY(-2px) translateX(5px);
+}

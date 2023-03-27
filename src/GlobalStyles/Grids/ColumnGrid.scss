@@ -1,0 +1,6 @@
+@mixin column-grid {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}

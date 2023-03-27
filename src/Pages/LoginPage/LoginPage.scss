@@ -1,0 +1,29 @@
+@import '../../GlobalStyles/index';
+
+.login-form--container {
+  @include column-grid;
+  @include border-radius-thick;
+  @include border-thick;
+  @include box-shadow;
+  margin: 100px auto 0 auto;
+  width: 600px;
+  box-sizing: border-box;
+  @include padding-small;
+  background: $color-primary;
+  & form > * {
+    margin-bottom: 60px;
+  }
+  & form :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.login-form--errors {
+  color: $color-error;
+  @include font-size-medium;
+  font-weight: bold;
+}
+
+.login-form--logout-button {
+
+}

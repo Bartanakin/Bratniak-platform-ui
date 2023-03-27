@@ -1,0 +1,30 @@
+header {
+    margin: 0;
+    -webkit-box-shadow: 0px 9px 13px -6px rgba(85, 85, 97, 0.5);
+    -moz-box-shadow: 0px 9px 13px -6px rgba(85, 85, 97, 0.5);
+    box-shadow: 0px 9px 13px -6px rgba(85, 85, 97, 0.5);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background: var(--main-color);
+}
+
+.navlink {
+    text-decoration: none;
+    width: min-content;
+    display: block;
+    white-space: nowrap;
+    padding: 20px;
+    color: #111111;
+    height: 100%;
+}
+
+.navlink:hover {
+    background: #111111;
+    color: white;
+}
+
+main {
+    margin: 2vh 0;
+    height: 100%;
+}

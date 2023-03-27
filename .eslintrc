@@ -1,0 +1,158 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": ["airbnb", "plugin:react/jsx-runtime"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true,
+    "es6": true
+  },
+  "plugins": [
+    "redux-saga",
+    "react",
+    "jsx-a11y",
+    "react-hooks"
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "globals": {
+    "global": true,
+    "PAGES_ENV": true,
+    "PAGES_USER_DOMAIN": true,
+    "PAGES_CHANNEL_DOMAIN": true,
+    "STUDIO_URL": true,
+    "VERSION": true,
+    "COMMITHASH": true,
+    "shallow": true
+  },
+  "rules": {
+    "arrow-parens": [
+      2,
+      "as-needed"
+    ],
+    "arrow-body-style": 0,
+    "class-methods-use-this": 0,
+    "comma-dangle": 0,
+    "default-case": 0,
+    "function-paren-newline": 0,
+    "import/extensions": 0,
+    "import/imports-first": 0,
+    "import/first": 0,
+    "import/newline-after-import": 0,
+    "import/no-dynamic-require": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/no-named-as-default": 0,
+    "import/no-named-as-default-member": 0,
+    "import/no-unresolved": 0,
+    "import/prefer-default-export": 0,
+    "indent": [
+      1,
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "linebreak-style": 0,
+    "max-len": [
+      2,
+      {
+        "code": 220
+      }
+    ],
+    "newline-per-chained-call": 0,
+    "no-alert": 0,
+    "no-confusing-arrow": 0,
+    "no-console": [
+      0,
+      {
+        "allow": [
+          "warn",
+          "error"
+        ]
+      }
+    ],
+    "no-continue": 0,
+    "no-else-return": 2,
+    "no-nested-ternary": 0,
+    "no-underscore-dangle": 0,
+    "no-unneeded-ternary": 0,
+    "no-mixed-operators": 0,
+    "no-param-reassign": 0,
+    "no-plusplus": 0,
+    "no-restricted": 0,
+    "no-restricted-globals": [
+      1,
+      {
+        "name": "require",
+        "message": "Use import instead."
+      }
+    ],
+    "no-use-before-define": 0,
+    "no-throw-literal": 0,
+    "one-var": 0,
+    "prefer-template": 2,
+    "prefer-destructuring": [
+      0,
+      {
+        "array": false,
+        "object": true
+      }
+    ],
+    "react/forbid-prop-types": 0,
+    "react/jsx-first-prop-new-line": [
+      2,
+      "multiline"
+    ],
+    "react/jsx-filename-extension": 0,
+    "react/jsx-key": 2,
+    "react/jsx-no-target-blank": 0,
+    "react/no-array-index-key": 0,
+    "react/no-find-dom-node": 0,
+    "react/prefer-stateless-function": 1,
+    "jsx-a11y/alt-text": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "jsx-a11y/aria-props": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/heading-has-content": 0,
+    "jsx-a11y/href-no-hash": 0,
+    "jsx-a11y/iframe-has-title": 0,
+    "jsx-a11y/mouse-events-have-key-events": 0,
+    "jsx-a11y/no-autofocus": 0,
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "jsx-a11y/no-noninteractive-tabindex": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "jsx-a11y/role-has-required-aria-props": 0,
+    "jsx-a11y/role-supports-aria-props": 0,
+    "jsx-a11y/tabindex-no-positive": 0,
+    "object-curly-newline": 0,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "radix": [
+      2,
+      "as-needed"
+    ],
+    "react/require-default-props": 0,
+    "react/require-extension": 0,
+    "react/self-closing-comp": 0,
+    "react/jsx-no-duplicate-props": [1, { "ignoreCase": false }],
+    "react/no-danger": 0,
+    "redux-saga/no-yield-in-race": 2,
+    "redux-saga/yield-effects": 0,
+    "no-unused-vars": ["warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": true, "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }],
+    "react/jsx-props-no-spreading": 0,
+    "require-yield": 0,
+    "vars-on-top": 0
+  },
+  "overrides": [{
+    "files": ["*.ts", "*.tsx"],
+    "rules": {
+      "no-shadow": "off",
+      "no-unused-vars": "off",
+    }
+  }]
+}

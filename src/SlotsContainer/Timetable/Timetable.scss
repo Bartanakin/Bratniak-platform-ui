@@ -1,0 +1,25 @@
+.timetable--content {
+    padding: 2vh 2vw;
+}
+
+.timetable--temp-info {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.timetable--day-info {
+    font-size: 1.6em;
+    text-align: center;
+    padding: 6px;
+    border-bottom: var(--main-color) solid 1px;
+}
+
+.timetable--column-container {
+    display: flex;
+    padding: 2vh 4vw;
+}
+
+.timetable--column-container::-webkit-scrollbar {
+    display: none;
+}

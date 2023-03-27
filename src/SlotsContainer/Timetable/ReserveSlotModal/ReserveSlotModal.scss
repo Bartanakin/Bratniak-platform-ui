@@ -1,0 +1,67 @@
+.reserve-slot-modal {
+    margin: 0;
+    padding: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.reserve-slot-modal form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.reserve-slot-modal--input-section {
+    position: relative;
+}
+
+.reserve-slot-modal--input-section input[type=text]:valid,
+.reserve-slot-modal--input-section input[type=text]:focus {
+    border: 2px solid #0031ff;
+}
+
+.reserve-slot-modal--input-section input[type=text] {
+    transition: 0.5s;
+    font-size: 30px;
+    padding: 0.4em;
+    border: 2px solid #111111;
+    background: var(--light-color);
+    border-radius: 5px;
+    outline: none;
+}
+
+.reserve-slot-modal--input-section input[type=text]:valid ~ label,
+.reserve-slot-modal--input-section input[type=text]:focus ~ label
+{
+    color: #0031ff;
+    transform: translateX(10px) translateY(-9px);
+    font-size: 0.75em;
+    padding: 0 12px;
+    background: var(--light-color);
+    border-right: #0031ff solid 2px;
+    border-left: #0031ff solid 2px;
+}
+
+.reserve-slot-modal--input-section label {
+    transition: 0.5s;
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 30px;
+    color: #111111;
+}
+
+.popup-content {
+    border: #111111 solid 2px;
+    border-radius: 10px;
+    width: 600px;
+    height: 400px;
+    background: var(--light-color);
+    margin: 0;
+    padding: 0;
+}

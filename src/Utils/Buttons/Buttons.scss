@@ -1,0 +1,42 @@
+.utils-button-default {
+    font-size: 2.4em;
+    border-radius: 50px;
+    min-width: 140px;
+    max-height: 70px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: auto 10px;
+}
+
+.utils-button-ok {
+    border: solid 5px #098c00;
+    color: #098c00;
+    background: #8abe87;
+}
+
+.utils-button-ok:hover {
+    color: #8abe87;
+    background: #098c00;
+}
+
+.utils-button-x {
+    border: solid 5px #c00000;
+    color: #c00000;
+    background: #e07373;
+}
+
+.utils-button-x:hover {
+    color: #e07373;
+    background: #c00000;
+}
+
+.utils-button-submit {
+    border: solid 5px #0036c0;
+    color: #0036c0;
+    background: #92adff;
+}
+
+.utils-button-submit:hover {
+    color: #92adff;
+    background: #0036c0;
+}
