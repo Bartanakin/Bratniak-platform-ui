@@ -1,11 +1,7 @@
-import Theme from './Theme';
-
-class WashingMachines {
+class WashingMachinesTheme {
   getDecoratedClassName(className) {
-    return `${className}-wm`;
+    return `${className}---wm`;
   }
 }
 
-WashingMachines.propTypes = {};
-
-export default WashingMachines;
+export default WashingMachinesTheme;

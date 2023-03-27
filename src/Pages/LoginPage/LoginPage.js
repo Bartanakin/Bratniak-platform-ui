@@ -2,13 +2,19 @@ import { Form, Formik } from 'formik';
 import { useState } from 'react';
 import axios from 'axios';
 import { MoonLoader } from 'react-spinners';
-import { getLoginResource, loginState } from '../Fetches/Resources';
-import TextFilterField from '../Utils/List/InputTemplates/TextFilterField';
-import SubmitButton from '../Utils/Buttons/SubmitButton';
-import './Pages.scss';
+import { useDispatch, useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
+import { getLoginResource } from '../../Fetches/Resources';
+import TextFilterField from '../../Utils/List/InputTemplates/TextFilterField';
+import SubmitButton from '../../Utils/Buttons/SubmitButton';
+import './LoginPage.scss';
+import { LOGIN_VALIDATION_SCHEMA } from './ValidationSchema';
+import { setLoggedIn } from '../../Redux/store';
 
 function LoginPage() {
-  const [logged, setLogged] = useState(loginState.logged);
+  const { t } = useTranslation();
+  const logged = useSelector(state => state.login.isLoggedIn);
+  const dispatch = useDispatch();
   const [isPending, setIsPending] = useState(false);
   const [error, setError] = useState(null);
 
@@ -18,9 +24,10 @@ function LoginPage() {
       const data = await axios.get(getLoginResource(), values);
       setIsPending(false);
       if (data.data.logged && data.data.token) {
-        setLogged(true);
-        loginState.logged = true;
-        loginState.token = data.data.token;
+        dispatch(setLoggedIn({
+          isLoggedIn: true,
+          token: data.data.token
+        }));
         setError(null);
       } else {
         setError('Error');
@@ -32,10 +39,10 @@ function LoginPage() {
   };
 
   const logout = () => {
-    setLogged(false);
-    setLogged(false);
-    loginState.logged = false;
-    loginState.token = null;
+    dispatch(setLoggedIn({
+      isLoggedIn: false,
+      token: ''
+    }));
   };
 
   return (
@@ -44,7 +51,7 @@ function LoginPage() {
         <div className="login-form--errors">{error}</div>
       )}
       {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
-      { logged && !isPending && (<button className="login-form--logout-button" type="button" onClick={logout}>Logout</button>)}
+      { logged && !isPending && (<button className="login-form--logout-button" type="button" onClick={logout}>{t('login.logout')}</button>)}
       { isPending && (
         <MoonLoader
           size={70}
@@ -58,10 +65,11 @@ function LoginPage() {
             password: ''
           }}
           onSubmit={onSubmit}
+          validationSchema={LOGIN_VALIDATION_SCHEMA}
         >
           <Form>
-            <TextFilterField label="Login" name="login" required />
-            <TextFilterField label="Password" name="password" required type="password" />
+            <TextFilterField label={t('login.login')} name="login" required />
+            <TextFilterField label={t('login.password')} name="password" required type="password" />
             <SubmitButton />
           </Form>
         </Formik>

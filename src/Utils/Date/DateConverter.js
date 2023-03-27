@@ -1,11 +1,19 @@
-import PropTypes from 'prop-types';
+class DateConverter {
+  addMonthZero(month) {
+    month += 1;
+    if (month < 10) {
+      return `0${month}`;
+    }
 
-function DateConverter() {
-    return (
-        <div></div>
-    );
+    return `${month}`;
+  }
+
+  formatDate(date) {
+    const dayNumber = date.getDate();
+    const month = this.addMonthZero(date.getMonth());
+    const year = date.getFullYear();
+
+    return `${dayNumber}-${month}-${year}`;
+  }
 }
-
-DateConverter.propTypes = {};
-
 export default DateConverter;

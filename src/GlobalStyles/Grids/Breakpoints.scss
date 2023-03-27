@@ -1,0 +1,33 @@
+$breakpoints: (
+  "very-small": ( "from": 0, "col-number": 12 ),
+  "small": ( "from": 480px, "col-number": 6 ),
+  "medium": ( "from": 720px, "col-number": 4 ),
+  "large": ( "from": 960px, "col-number": 2 ),
+  "very-large": ( "from": 1200px, "col-number": 1 )
+);
+
+@mixin very-small {
+  @media (min-width: map-get(map-get($breakpoints, "very-small"), "from")) {
+    @content;
+  }
+}
+@mixin small {
+  @media (min-width: map-get(map-get($breakpoints, "small"), "from")) {
+    @content;
+  }
+}
+@mixin medium {
+  @media (min-width: map-get(map-get($breakpoints, "medium"), "from")) {
+    @content;
+  }
+}
+@mixin large {
+  @media (min-width: map-get(map-get($breakpoints, "large"), "from")) {
+    @content;
+  }
+}
+@mixin very-large {
+  @media (min-width: map-get(map-get($breakpoints, "very-large"), "from")) {
+    @content;
+  }
+}

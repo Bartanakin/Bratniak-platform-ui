@@ -1,0 +1,24 @@
+@mixin row-gap-small {
+  & > * {
+    padding: $padding-small;
+  }
+  &:first-child {
+    padding-left: 0;
+  }
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+@mixin row-gap-very-small {
+  & > * {
+    padding: $padding-very-small;
+  }
+  &:first-child {
+    padding-left: 0;
+  }
+  &:last-child {
+    padding-right: 0;
+  }
+}
+

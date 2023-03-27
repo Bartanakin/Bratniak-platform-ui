@@ -1,24 +1,13 @@
+@import "../../GlobalStyles/index";
+
 .timetable--column--content {
     max-width: 200px;
+    @include x-scrollable-element;
 }
-
-.timetable--column--content:first-child {
-    margin-left: auto;
-}
-
-.timetable--column--content:last-child {
-    margin-right: auto;
-}
-
 .timetable--column--title {
     overflow: hidden;
-    font-size: 1.6em;
-    padding: 2px;
     text-align: center;
-    border-bottom: var(--light-color) solid 1px;
+    @include font-size-large;
+    @include border(false, true, false, false);
     margin: 10px;
-}
-
-.timetable--columns--slot-container {
-
 }

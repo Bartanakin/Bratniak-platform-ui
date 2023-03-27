@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
+export const SLOT_STATE_FREE = 'free';
 
-function SlotState() {
-    return (
-        <div></div>
-    );
-}
+export const SLOT_STATE_RESERVED = 'reserved';
 
-SlotState.propTypes = {};
+export const SLOT_STATE_OCCUPIED = 'occupied';
 
-export default SlotState;
+export const allStates = () => [
+  SLOT_STATE_FREE,
+  SLOT_STATE_OCCUPIED,
+  SLOT_STATE_RESERVED,
+];

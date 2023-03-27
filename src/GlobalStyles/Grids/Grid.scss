@@ -1,0 +1,60 @@
+@use "sass:math";
+@import "Breakpoints";
+
+$grid-columns: 12;
+
+@mixin grid-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+@include very-small {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i}-very-small {
+      box-sizing: border-box;
+      flex-grow: 0;
+      width: math.div($i * 100% * map-get(map-get($breakpoints, "very-small"), "col-number"), $grid-columns);
+    }
+  }
+}
+@include small {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i}-small {
+      box-sizing: border-box;
+      flex-grow: 0;
+      width: math.div($i * 100% * map-get(map-get($breakpoints, "small"), "col-number"), $grid-columns);
+    }
+  }
+}
+@include medium {
+   @for $i from 1 through $grid-columns {
+     .col-#{$i}-medium {
+       box-sizing: border-box;
+       flex-grow: 0;
+       width: math.div($i * 100% * map-get(map-get($breakpoints, "medium"), "col-number"), $grid-columns);
+     }
+   }
+ }
+@include large {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i}-large {
+      box-sizing: border-box;
+      flex-grow: 0;
+      width: math.div($i * 100% * map-get(map-get($breakpoints, "large"), "col-number"), $grid-columns);
+    }
+  }
+}
+@include very-large {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i}-very-large {
+      box-sizing: border-box;
+      flex-grow: 0;
+      width: math.div($i * 100% * map-get(map-get($breakpoints, "very-large"), "col-number"), $grid-columns);
+    }
+  }
+}

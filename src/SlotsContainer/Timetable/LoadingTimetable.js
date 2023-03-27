@@ -1,11 +1,16 @@
-import PropTypes from 'prop-types';
+import { MoonLoader } from 'react-spinners';
 
-function DummyTimetable() {
-    return (
-        <div></div>
-    );
+function LoadingTimetable() {
+  return (
+    <div className="timetable--content timetable--temp-info">
+      <MoonLoader
+        size={70}
+        aria-label="Loading Spinner"
+      />
+    </div>
+  );
 }
 
-DummyTimetable.propTypes = {};
+LoadingTimetable.propTypes = {};
 
-export default DummyTimetable;
+export default LoadingTimetable;

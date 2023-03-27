@@ -1,0 +1,18 @@
+$padding-tiny: 5px;
+@mixin padding-tiny {
+  padding: 5px;
+}
+
+$padding-very-small: 10px;
+@mixin padding-very-small {
+  padding: $padding-very-small;
+}
+
+$padding-small: 20px;
+@mixin padding-small {
+  padding: $padding-small;
+}
+
+@mixin padding-medium {
+  padding: 60px;
+}

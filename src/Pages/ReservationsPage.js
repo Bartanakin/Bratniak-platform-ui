@@ -1,6 +1,8 @@
+import ReservationListContainer from '../Reservations/ReservationListContainer';
+
 function ReservationsPage() {
   return (
-    <div></div>
+    <ReservationListContainer />
   );
 }
 

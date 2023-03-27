@@ -1,11 +1,23 @@
-@mixin padding-very-small {
-  padding: 10px;
+@mixin margin-tiny {
+  margin: 5px;
 }
 
-@mixin padding-small {
-  padding: 20px;
+@mixin margin-very-small {
+  margin: 10px;
 }
 
-@mixin padding-medium {
-  padding: 60px;
+@mixin margin-small {
+  margin: 20px;
+}
+
+@mixin margin-medium-small {
+  margin: 40px;
+}
+
+@mixin margin-medium {
+  margin: 60px;
+}
+
+@mixin margin-vertical-small {
+  margin: 20px 0;
 }

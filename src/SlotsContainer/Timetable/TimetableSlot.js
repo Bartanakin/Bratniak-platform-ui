@@ -1,21 +1,30 @@
 import PropTypes from 'prop-types';
-import './TimetableSlot.css';
+import './TimetableSlot.scss';
+import { useTranslation } from 'react-i18next';
 
-function TimetableFreeSlot({ startingHour, endingHour, state, key }) {
+function TimetableSlot({ startingHour, endingHour, roomNumber, state, createModalCallback, closeModalCallback, id }) {
+  const { t } = useTranslation();
+
   return (
-    <div className="timetable--slot--content tile default-tile">
-      <div className="timetable--slot--hour">{ `From: ${startingHour}` }</div>
-      <div className="timetable--slot--hour">{ `To: ${endingHour}` }</div>
-      <div className="timetable--slot--state">{ state }</div>
+    <div
+      className={`timetable--slot--content tile ${state.isAllowedInteraction() ? 'tile-interactive' : ''} ${state.getTileClassName()}`}
+      onClick={createModalCallback(state.getModal({ id, roomNumber }, closeModalCallback))}
+    >
+      <div className="timetable--slot--hour">{ `${t('timetable.from')}: ${startingHour}` }</div>
+      <div className="timetable--slot--hour">{ `${t('timetable.to')}: ${endingHour}` }</div>
+      <div className="timetable--slot--state">{ state.getTileStateName(roomNumber, t) }</div>
     </div>
   );
 }
 
-TimetableFreeSlot.propTypes = {
+TimetableSlot.propTypes = {
   startingHour: PropTypes.string,
   endingHour: PropTypes.string,
-  state: PropTypes.string,
-  key: PropTypes.number
+  roomNumber: PropTypes.string,
+  state: PropTypes.object,
+  createModalCallback: PropTypes.func,
+  closeModalCallback: PropTypes.func,
+  id: PropTypes.number
 };
 
-export default TimetableFreeSlot;
+export default TimetableSlot;

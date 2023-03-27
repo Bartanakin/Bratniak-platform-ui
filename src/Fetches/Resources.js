@@ -1,11 +1,26 @@
-import PropTypes from 'prop-types';
+const DOMAIN = 'http://localhost:8001';
 
-function Resources() {
-    return (
-        <div></div>
-    );
+export function getCalendarResource(day) {
+  return `${DOMAIN}/calendar`;
 }
 
-Resources.propTypes = {};
+export function getDaysForward() {
+  return `${DOMAIN}/days-forward`;
+}
 
-export default Resources;
+export function changeSlotState(slotId) {
+  return `${DOMAIN}/slot-state/${slotId}`;
+}
+
+export function getReservationsResource() {
+  return `${DOMAIN}/reservations-list`;
+}
+
+export const loginState = {
+  logged: false,
+  token: ''
+};
+
+export function getLoginResource() {
+  return `${DOMAIN}/login`;
+}

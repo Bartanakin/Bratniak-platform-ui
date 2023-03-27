@@ -1,12 +1,26 @@
-import PropTypes from 'prop-types';
+import store from '../../../Redux/store';
+import ReserveSlotModal from '../ReserveSlotModal/ReserveSlotModal';
+import { SLOT_STATE_FREE, SLOT_STATE_RESERVED } from './SlotState';
 
-class TimetableSlotFree {
+class TimetableSlotReserved {
   getTileClassName() {
-    return 'default-tile';
+    return 'reserved-tile';
   }
 
-  getStateName() {
-    return 'free';
+  getTileStateName(roomNumber, t) {
+    return t(`slots.tile_states.${SLOT_STATE_RESERVED}`, { roomNumber });
+  }
+
+  isAllowedInteraction() {
+    return store.getState().login.isLoggedIn;
+  }
+
+  getModal(data, close) {
+    if (this.isAllowedInteraction()) {
+      return <ReserveSlotModal data={data} closeCallback={close} />;
+    }
+
+    return '';
   }
 }
-export default TimetableSlotFree;
+export default TimetableSlotReserved;

@@ -1,1 +1,14 @@
-$themes:
+$themes: (
+  "wm": ( // washing machines
+    "primary": $color-primary,
+    "primary-rgba": rgba($color-primary, 1),
+    "secondary": $color-secondary,
+    "secondary-rgba": rgba($color-secondary, 1)
+  ),
+  "dr": ( // dryers
+    "primary": $color-primary-2,
+    "primary-rgba": rgba($color-primary-2, 1),
+    "secondary": $color-secondary-2,
+    "secondary-rgba": rgba($color-secondary-2, 1)
+  )
+)

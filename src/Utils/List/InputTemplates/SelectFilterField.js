@@ -1,27 +1,32 @@
 import PropTypes from 'prop-types';
 import { useField } from 'formik';
+import './FilterField.scss';
+import ErrorFieldInfo from './ErrorFieldInfo';
+import Container from '../../../DependecyInjection/Container';
 
-function MultiselectFilterTemplate({ label, ...props }) {
+function SelectFilterField({ label, ...props }) {
   const [field, meta] = useField(props);
 
   return (
-    <div className="single-input-container">
-      <select
-        className={`modal-text-input${meta.touched && meta.error ? ' input-with-error' : ''}`}
-        {...field}
-        {...props}
-      />
-      {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-      <label>
-        {label}
-      </label>
-      <div className="input-errors">{meta.touched && meta.error ? meta.error : ''}</div>
+    <div className={`${(new Container()).get('Theme').getDecoratedClassName('single-form-input-container')}`}>
+      <div className="xd">
+        <select
+          className={`${meta.touched && meta.error ? ' form-input-with-error' : ''}`}
+          {...field}
+          {...props}
+        />
+        {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+        <label>
+          {label}
+        </label>
+        <ErrorFieldInfo touched={meta.touched} error={meta.error} />
+      </div>
     </div>
   );
 }
 
-MultiselectFilterTemplate.propTypes = {
+SelectFilterField.propTypes = {
   label: PropTypes.string,
 };
 
-export default MultiselectFilterTemplate;
+export default SelectFilterField;

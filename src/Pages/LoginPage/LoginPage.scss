@@ -1,12 +1,14 @@
 @import '../../GlobalStyles/index';
 
 .login-form--container {
+  position: relative;
   @include column-grid;
   @include border-radius-thick;
   @include border-thick;
   @include box-shadow;
   margin: 100px auto 0 auto;
   width: 600px;
+  min-height: 400px;
   box-sizing: border-box;
   @include padding-small;
   background: $color-primary;
@@ -25,5 +27,15 @@
 }
 
 .login-form--logout-button {
-
+  width: 80px;
+  @include border-radius;
+  @include border;
+  @include padding-very-small;
+  background: $color-secondary;
+  cursor: pointer;
+  margin: auto;
+  @include transition-all;
+  &:hover {
+    @include scale;
+  }
 }

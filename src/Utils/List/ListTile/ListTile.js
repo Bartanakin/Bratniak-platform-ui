@@ -1,11 +1,20 @@
+import './ListTile.scss';
 import PropTypes from 'prop-types';
 
-function ListTile({}) {
+function ListTile({ children, onClick, tileClassNames = [] }) {
   return (
-    <div></div>
+    <div className="list--tile-wrap-up" onClick={onClick}>
+      <div className={`list--list-tile ${tileClassNames.join(' ')}`}>
+        { children }
+      </div>
+    </div>
   );
 }
 
-ListTile.propTypes = {};
+ListTile.propTypes = {
+  children: PropTypes.array,
+  tileClassNames: PropTypes.array,
+  onClick: PropTypes.func
+};
 
 export default ListTile;

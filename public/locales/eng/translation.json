@@ -1,0 +1,44 @@
+{
+  "errors": {
+    "connection": "Error. Connection has not been established."
+  },
+  "navbar": {
+    "washing_machines": "Washing machines",
+    "dryers": "Dryers",
+    "list_of_reservations":  "List of reservations"
+  },
+  "login": {
+    "login": "Login",
+    "password": "Password",
+    "logout": "Logout"
+  },
+  "timetable": {
+    "from": "From",
+    "to": "To"
+  },
+  "reservation_list": {
+    "tile": {
+      "name": "Name",
+      "date": "Date",
+      "from": "From",
+      "to": "To",
+      "slot_state": "Slot state"
+    }
+  },
+  "slots": {
+    "states": {
+      "free": "Free",
+      "reserved": "Reserved",
+      "occupied": "Occupied"
+    },
+    "tile_states": {
+      "free": "Free",
+      "reserved": "Reserved by {{roomNumber}}",
+      "occupied": "Occupied by {{roomNumber}}"
+    }
+  },
+  "filters": {
+    "room_number": "Room number",
+    "slot_state": "Slot state"
+  }
+}

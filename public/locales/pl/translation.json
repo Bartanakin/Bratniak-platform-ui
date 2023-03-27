@@ -1,3 +1,44 @@
 {
-  "test": "eng-test"
+  "errors": {
+    "connection": "Wystąpił błąd. Połączenie nie zostało nawiązane."
+  },
+  "navbar": {
+    "washing_machines": "Pralki",
+    "dryers": "Suszarki",
+    "list_of_reservations":  "Lista rezerwacji"
+  },
+  "login": {
+    "login": "Login",
+    "password": "Hasło",
+    "logout": "Wyloguj"
+  },
+  "timetable": {
+    "from": "Od",
+    "to": "Do"
+  },
+  "slots": {
+    "states": {
+      "free": "Wolne",
+      "reserved": "Zarezerwowane",
+      "occupied": "Zajęte"
+    },
+    "tile_states": {
+      "free": "Wolne",
+      "reserved": "Zarez. przez {{roomNumber}}",
+      "occupied": "Zajęte przez {{roomNumber}}"
+    }
+  },
+  "reservation_list": {
+    "tile": {
+      "name": "Nazwa",
+      "date": "Data",
+      "from": "Od",
+      "to": "Do",
+      "slot_state": "Zajętość"
+    }
+  },
+  "filters": {
+    "room_number": "Numer pokoju",
+    "slot_state": "Zajętość miejsca"
+  }
 }

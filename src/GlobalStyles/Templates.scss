@@ -1,0 +1,86 @@
+@import 'Templates/Padding';
+@import 'Templates/Margin';
+@import 'Templates/FontSize';
+@import 'Templates/XScrollable';
+
+@mixin border ($top: true, $bottom: true, $left: true, $right: true) {
+  $border: $color-focus solid 1px;
+  @if($top) {
+    border-top: $border;
+  }
+  @if($bottom) {
+    border-bottom: $border;
+  }
+  @if($left) {
+    border-left: $border;
+  }
+  @if($right) {
+    border-right: $border;
+  }
+}
+
+
+$border-thick-thickness: 2px;
+@mixin border-thick ($top: true, $bottom: true, $left: true, $right: true) {
+  $border: $color-focus solid $border-thick-thickness;
+  @if($top) {
+    border-top: $border;
+  }
+  @if($bottom) {
+    border-bottom: $border;
+  }
+  @if($left) {
+    border-left: $border;
+  }
+  @if($right) {
+    border-right: $border;
+  }
+}
+
+@mixin border-radius ($top-left: true, $bottom-left: true, $top-right: true, $bottom-right: true){
+  $border-radius: 5px;
+  @if($top-left) {
+    border-top-left-radius: $border-radius;
+  }
+  @if($bottom-left) {
+    border-bottom-left-radius: $border-radius;
+  }
+  @if($top-right) {
+    border-top-right-radius: $border-radius;
+  }
+  @if($bottom-right) {
+    border-bottom-right-radius: $border-radius;
+  }
+}
+
+@mixin border-radius-thick ($top-left: true, $bottom-left: true, $top-right: true, $bottom-right: true){
+  $border-radius: 10px;
+  @if($top-left) {
+    border-top-left-radius: $border-radius;
+  }
+  @if($bottom-left) {
+    border-bottom-left-radius: $border-radius;
+  }
+  @if($top-right) {
+    border-top-right-radius: $border-radius;
+  }
+  @if($bottom-right) {
+    border-bottom-right-radius: $border-radius;
+  }
+}
+
+@mixin scale {
+  transform: scale(110%);
+}
+
+@mixin gradient($p-color, $s-color) {
+  background: $p-color;
+  background: linear-gradient(339deg, $p-color 0%, $s-color 40%, $s-color 60%, $p-color 100%);
+}
+
+@mixin box-shadow {
+  -webkit-box-shadow: 0px 9px 13px -6px rgba(85, 85, 97, 0.5);
+  -moz-box-shadow: 0px 9px 13px -6px rgba(85, 85, 97, 0.5);
+  box-shadow: 0px 9px 13px -6px rgba(85, 85, 97, 0.5);
+}
+

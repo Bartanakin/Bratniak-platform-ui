@@ -1,0 +1,336 @@
+{
+  "days-forward": {
+    "daysFromNow": 4
+  },
+  "calendar": {
+    "columns": [
+      {
+        "id": 1,
+        "title": "P1",
+        "slots": [
+          {
+            "id": 5,
+            "startingHour": "8:00",
+            "endingHour": "11:00",
+            "state": "reserved",
+            "roomNumber": "206C"
+          },
+          {
+            "id": 1,
+            "startingHour": "11:00",
+            "endingHour": "14:00",
+            "state": "free",
+            "roomNumber": ""
+          },
+          {
+            "id": 2,
+            "startingHour": "14:00",
+            "endingHour": "17:00",
+            "state": "free",
+            "roomNumber": ""
+          },
+          {
+            "id": 3,
+            "startingHour": "17:00",
+            "endingHour": "20:00",
+            "state": "reserved",
+            "roomNumber": "206C"
+          },
+          {
+            "id": 4,
+            "startingHour": "20:00",
+            "endingHour": "23:00",
+            "state": "occupied",
+            "roomNumber": "206C"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "P2",
+        "slots": [
+          {
+            "id": 5,
+            "startingHour": "8:00",
+            "endingHour": "11:00",
+            "state": "reserved",
+            "roomNumber": "206C"
+          },
+          {
+            "id": 1,
+            "startingHour": "11:00",
+            "endingHour": "14:00",
+            "state": "free",
+            "roomNumber": ""
+          },
+          {
+            "id": 2,
+            "startingHour": "14:00",
+            "endingHour": "17:00",
+            "state": "free",
+            "roomNumber": ""
+          },
+          {
+            "id": 3,
+            "startingHour": "17:00",
+            "endingHour": "20:00",
+            "state": "occupied",
+            "roomNumber": "206C"
+          },
+          {
+            "id": 4,
+            "startingHour": "20:00",
+            "endingHour": "23:00",
+            "state": "free",
+            "roomNumber": ""
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "P3",
+        "slots": [
+          {
+            "id": 5,
+            "startingHour": "8:00",
+            "endingHour": "11:00",
+            "state": "reserved",
+            "roomNumber": "206C"
+          },
+          {
+            "id": 1,
+            "startingHour": "11:00",
+            "endingHour": "14:00",
+            "state": "free",
+            "roomNumber": ""
+          },
+          {
+            "id": 2,
+            "startingHour": "14:00",
+            "endingHour": "17:00",
+            "state": "free",
+            "roomNumber": ""
+          },
+          {
+            "id": 3,
+            "startingHour": "17:00",
+            "endingHour": "20:00",
+            "state": "free",
+            "roomNumber": ""
+          },
+          {
+            "id": 4,
+            "startingHour": "20:00",
+            "endingHour": "23:00",
+            "state": "occupied",
+            "roomNumber": "206C"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "P4",
+        "slots": [
+          {
+            "id": 5,
+            "startingHour": "8:00",
+            "endingHour": "11:00",
+            "state": "reserved",
+            "roomNumber": "206C"
+          },
+          {
+            "id": 1,
+            "startingHour": "11:00",
+            "endingHour": "14:00",
+            "state": "free",
+            "roomNumber": ""
+          },
+          {
+            "id": 2,
+            "startingHour": "14:00",
+            "endingHour": "17:00",
+            "state": "occupied",
+            "roomNumber": "206C"
+          },
+          {
+            "id": 3,
+            "startingHour": "17:00",
+            "endingHour": "20:00",
+            "state": "occupied",
+            "roomNumber": "206C"
+          },
+          {
+            "id": 4,
+            "startingHour": "20:00",
+            "endingHour": "23:00",
+            "state": "occupied",
+            "roomNumber": "206C"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "P5",
+        "slots": [
+          {
+            "id": 5,
+            "startingHour": "8:00",
+            "endingHour": "11:00",
+            "state": "occupied",
+            "roomNumber": "206C"
+          },
+          {
+            "id": 1,
+            "startingHour": "11:00",
+            "endingHour": "14:00",
+            "state": "reserved",
+            "roomNumber": "206C"
+          },
+          {
+            "id": 2,
+            "startingHour": "14:00",
+            "endingHour": "17:00",
+            "state": "occupied",
+            "roomNumber": "206C"
+          },
+          {
+            "id": 3,
+            "startingHour": "17:00",
+            "endingHour": "20:00",
+            "state": "free",
+            "roomNumber": ""
+          },
+          {
+            "id": 4,
+            "startingHour": "20:00",
+            "endingHour": "23:00",
+            "state": "free",
+            "roomNumber": ""
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "P6",
+        "slots": [
+          {
+            "id": 5,
+            "startingHour": "8:00",
+            "endingHour": "11:00",
+            "state": "free",
+            "roomNumber": ""
+          },
+          {
+            "id": 1,
+            "startingHour": "11:00",
+            "endingHour": "14:00",
+            "state": "reserved",
+            "roomNumber": "206C"
+          },
+          {
+            "id": 2,
+            "startingHour": "14:00",
+            "endingHour": "17:00",
+            "state": "free",
+            "roomNumber": ""
+          },
+          {
+            "id": 3,
+            "startingHour": "17:00",
+            "endingHour": "20:00",
+            "state": "occupied",
+            "roomNumber": "206C"
+          },
+          {
+            "id": 4,
+            "startingHour": "20:00",
+            "endingHour": "23:00",
+            "state": "occupied",
+            "roomNumber": "206C"
+          }
+        ]
+      }
+    ]
+  },
+  "slot-state": [
+    {
+      "id": 1,
+      "state": "free",
+      "roomName": ""
+    },
+    {
+      "id": 2,
+      "state": "reserved",
+      "roomName": ""
+    }
+  ],
+  "reservations-list": [
+    {
+      "id": 1,
+      "state": "free",
+      "roomNumber": "",
+      "machineName": "P1",
+      "date": "2023-05-01",
+      "hourFrom": "12:00",
+      "hourTo": "15:00"
+    },
+    {
+      "id": 2,
+      "state": "occupied",
+      "roomNumber": "206C",
+      "machineName": "P2",
+      "date": "2023-05-01",
+      "hourFrom": "12:00",
+      "hourTo": "15:00"
+    },
+    {
+      "id": 3,
+      "state": "free",
+      "roomNumber": "",
+      "machineName": "P3",
+      "date": "2023-05-01",
+      "hourFrom": "12:00",
+      "hourTo": "15:00"
+    },
+    {
+      "id": 4,
+      "state": "free",
+      "roomNumber": "",
+      "machineName": "P4",
+      "date": "2023-05-01",
+      "hourFrom": "12:00",
+      "hourTo": "15:00"
+    },
+    {
+      "id": 5,
+      "state": "occupied",
+      "roomNumber": "206C",
+      "machineName": "S1",
+      "date": "2023-05-01",
+      "hourFrom": "12:00",
+      "hourTo": "15:00"
+    },
+    {
+      "id": 6,
+      "state": "reserved",
+      "roomNumber": "206C",
+      "machineName": "S2",
+      "date": "2023-05-01",
+      "hourFrom": "12:00",
+      "hourTo": "15:00"
+    },
+    {
+      "id": 7,
+      "state": "free",
+      "roomNumber": "",
+      "machineName": "S3",
+      "date": "2023-05-01",
+      "hourFrom": "12:00",
+      "hourTo": "15:00"
+    }
+  ],
+  "login": {
+    "logged": true,
+    "token": "token"
+  }
+}

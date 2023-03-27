@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
-import './Buttons.css';
+import './Buttons.scss';
 
-function OkButton({ onClick }) {
+function XButton({ onClick }) {
   return (
-    <button className="ok-button" type="submit" onClick={onClick}>&#10003;</button>
+    <button className="utils-button-x" type="button" onClick={onClick}>&#10008;</button>
   );
 }
 
-OkButton.propTypes = {
+XButton.propTypes = {
   onClick: PropTypes.func
 };
 
-export default OkButton;
+export default XButton;

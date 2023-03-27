@@ -1,0 +1,14 @@
+@import "../GlobalStyles/index";
+
+.reservation-tile--row {
+  @include font-size-small;
+  @include padding-tiny;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.reservation-tile--row-title {
+  font-weight: bold;
+}

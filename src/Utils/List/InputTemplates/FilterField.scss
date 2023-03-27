@@ -1,90 +1,103 @@
-@import "../../../GlobalStyles/index";
+@import "../../../GlobalStyles/index.scss";
 
-.form-form-container {
-    background: var(--main-color);
-    margin: 2vh 0;
-    padding: 4vh;
-    display: flex;
-    @mix
+@each $theme, $values in $themes {
+    .form-form-container---#{$theme} {
+        @include box-shadow;
+        @include margin-vertical-small;
+        background: map-get($values, 'primary');
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+    }
 }
 
-.single-form-input-container {
-    position: relative;
-    margin: 30px;
+@each $theme, $values in $themes {
+    .single-form-input-container---#{$theme} {
+        position: relative;
+        height: 60px - $border-thick-thickness;
+        @include margin-medium-small;
+        & .xd {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            width: min-content;
+        }
+        & .xd select,
+        & .xd input[type=text],
+        & .xd input[type=password] {
+            @include border-thick;
+            @include border-radius;
+            @include font-size-medium;
+            @include transition-all-medium;
+            @include font-mantel-serif;
+            @include padding-very-small;
+            min-width: 280px;
+            background: map-get($values, "secondary");
+            outline: none;
+            position: relative;
+            z-index: 20;
+        }
+        & .xd select,
+        & .xd input[type=text]:valid,
+        & .xd input[type=password]:valid,
+        & .xd input[type=text]:focus,
+        & .xd input[type=password]:focus {
+            @include border-thick;
+        }
+        & .xd label {
+            @include transition-all-medium;
+            @include font-size-medium;
+            pointer-events: none;
+            position: absolute;
+            left: 0;
+            padding: calc($padding-very-small + $border-thick-thickness);
+            color: $color-out-of-focus;
+            z-index: 30;
+        }
+        & .xd select ~ label,
+        & .xd input[type=text]:valid ~ label,
+        & .xd input[type=password]:valid ~ label,
+        & .xd input[type=password]:focus ~ label,
+        & .xd input[type=text]:focus ~ label {
+            color: var(--focus-color);
+            top: 0;
+            transform: translateY(calc(-100% + $border-thick-thickness)) translateX(5px);
+            @include font-size-small;
+            background: map-get($values, "secondary");
+            @include border-radius(true, false, true, false);
+            @include border-thick(true, false, true, true);
+            padding: 0 $padding-very-small;
+            z-index: 10;
+        }
+        & .xd .form-input-errors {
+            max-width: 85%;
+            position: absolute;
+            bottom: 0;
+            transform: translateY(calc(100% - $border-thick-thickness)) translateX(5px);
+            @include font-size-very-small;
+            padding: 0 $padding-very-small;
+            background: map-get($values, "secondary");
+            @include border-radius(false, true, false, true);
+            @include border-thick(false, true, true, true);
+            @include transition-all-medium;
+            color: $color-error;
+            border-color: $color-error;
+            z-index: 10;
+        }
+        & .xd input[type=text]:valid        ~ .form-input-errors,
+        & .xd input[type=password]:valid    ~ .form-input-errors,
+        & .xd input[type=text]:focus        ~ .form-input-errors,
+        & .xd input[type=password]:focus    ~ .form-input-errors,
+        & .xd .form-hidden-errors {
+            transform: translateY(-$border-thick-thickness) translateX(5px);
+        }
+    }
 }
 
-.single-form-input-container select,
-.single-form-input-container input[type=text] {
-    position: relative;;
-    font-family: 'Martel', serif;
-    min-width: 20vw;
-    transition: 0.5s;
-    font-size: 1em;
-    padding: 0.4em;
-    border: 2px solid #111111;
-    background: var(--light-color);
-    border-radius: 5px;
-    outline: none;
-    z-index: 20;
-}
-
-.single-form-input-container select,
-.single-form-input-container input[type=text]:valid,
-.single-form-input-container input[type=text]:focus {
-    border: 2px solid var(--focus-color);
-}
-
-.single-form-input-container label {
-    transition: 0.5s;
+.single-form-button-container {
     position: absolute;
-    left: 0;
-    padding: calc(0.4em + 2px);
-    pointer-events: none;
-    font-size: 1em;
-    color: #555555;
-    z-index: 30;
-}
-
-.single-form-input-container select ~ label,
-.single-form-input-container input[type=text]:valid ~ label,
-.single-form-input-container input[type=text]:focus ~ label
-{
-    color: var(--focus-color);
-    top: 0;
-    transform: translateY(calc(-100% + 2px)) translateX(5px);
-    font-size: 0.75em;
-    padding: 0 12px;
-    background: var(--light-color);
-    border-radius: 5px 5px 0 0;
-    border-top: var(--focus-color) solid 2px;
-    border-left: var(--focus-color) solid 2px;
-    border-right: var(--focus-color) solid 2px;
-    z-index: 10;
-}
-
-.form-input-with-error {
-    border-color: var(--error-color);
-}
-
-.single-form-input-container .form-input-errors {
-    max-width: 85%;
-    color: var(--error-color);
-    position: absolute;
-    bottom: 0;
-    transform: translateY(calc(100% - 2px)) translateX(5px);
-    font-size: 0.6em;
-    padding: 0 12px;
-    background: var(--light-color);
-    border-radius: 0 0 5px 5px;
-    transition: 0.5s;
-    border-bottom: var(--error-color) solid 2px;
-    border-left: var(--error-color) solid 2px;
-    border-right: var(--error-color) solid 2px;
-    z-index: 10;
-}
-
-.single-form-input-container input[type=text]:valid ~ .form-input-errors,
-.single-form-input-container input[type=text]:focus ~ .form-input-errors,
-.single-form-input-container .form-hidden-errors {
-    transform: translateY(-2px) translateX(5px);
+    margin-top: 10px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
 }

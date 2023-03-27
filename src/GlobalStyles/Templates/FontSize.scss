@@ -1,11 +1,15 @@
-@mixin padding-very-small {
-  padding: 10px;
+@mixin font-size-very-small {
+  font-size: 0.6em;
 }
 
-@mixin padding-small {
-  padding: 20px;
+@mixin font-size-small {
+  font-size: 0.8em;
 }
 
-@mixin padding-medium {
-  padding: 60px;
+@mixin font-size-medium {
+  font-size: 1em;
+}
+
+@mixin font-size-large {
+  font-size: 1.6em;
 }

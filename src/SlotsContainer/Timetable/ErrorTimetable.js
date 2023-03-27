@@ -1,16 +1,12 @@
-import { MoonLoader } from 'react-spinners';
+import { useTranslation } from 'react-i18next';
 
-function LoadingTimetable() {
+function ErrorTimetable() {
+  const { t } = useTranslation();
+
   return (
     <div className="timetable--content timetable--temp-info">
-      <MoonLoader
-        size={70}
-        aria-label="Loading Spinner"
-      />
+      <h3>{t('errors.connection')}</h3>
     </div>
   );
 }
-
-LoadingTimetable.propTypes = {};
-
-export default LoadingTimetable;
+export default ErrorTimetable;

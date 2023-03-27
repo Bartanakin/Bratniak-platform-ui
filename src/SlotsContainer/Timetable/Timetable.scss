@@ -1,25 +1,24 @@
+@import "../../GlobalStyles/index";
+
 .timetable--content {
-    padding: 2vh 2vw;
+    @include padding-medium;
 }
 
 .timetable--temp-info {
-    display: flex;
-    align-content: center;
-    justify-content: center;
+    margin: auto;
+    width: min-content;
+    @include column-grid;
 }
 
 .timetable--day-info {
-    font-size: 1.6em;
+    position: relative;
     text-align: center;
-    padding: 6px;
-    border-bottom: var(--main-color) solid 1px;
+    @include font-size-large;
+    @include padding-very-small;
+    @include border(false, true, false, false);
 }
 
 .timetable--column-container {
-    display: flex;
-    padding: 2vh 4vw;
-}
-
-.timetable--column-container::-webkit-scrollbar {
-    display: none;
+    @include x-scrollable-container;
+    @include padding-small;
 }

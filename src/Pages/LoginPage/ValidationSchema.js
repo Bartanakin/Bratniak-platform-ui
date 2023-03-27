@@ -1,11 +1,6 @@
-import PropTypes from 'prop-types';
+import * as yup from 'yup';
 
-function ValidationSchema() {
-    return (
-        <div></div>
-    );
-}
-
-ValidationSchema.propTypes = {};
-
-export default ValidationSchema;
+export const LOGIN_VALIDATION_SCHEMA = yup.object().shape({
+  login: yup.string().required('Required'),
+  password: yup.string().required('Required')
+});

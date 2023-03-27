@@ -1,11 +1,22 @@
-import PropTypes from 'prop-types';
+import { useState } from 'react';
 
-function useModal() {
-    return (
-        <div></div>
-    );
+function usePopup(setModal) {
+  const [triggerModal, setTriggerModal] = useState(false);
+
+  const openCallback = newModal => {
+    if (!newModal) return () => {};
+
+    return (() => {
+      setModal(newModal);
+      setTriggerModal(current => !current);
+    });
+  };
+
+  const closeCallback = () => {
+    setTriggerModal(false);
+  };
+
+  return { openCallback, closeCallback, triggerModal };
 }
 
-useModal.propTypes = {};
-
-export default useModal;
+export default usePopup;

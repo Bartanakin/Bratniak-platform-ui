@@ -1,11 +1,21 @@
-import PropTypes from 'prop-types';
+import WashingMachinesTheme from '../Themes/WashingMachinesTheme';
 
-function Container() {
-  return (
-    <div></div>
-  );
+const data = {
+  Theme: WashingMachinesTheme
+};
+
+class Container {
+  has(key) {
+    return data[key] !== undefined;
+  }
+
+  get(key) {
+    return new data[key]();
+  }
+
+  set(key, constructor) {
+    data[key] = constructor;
+  }
 }
-
-Container.propTypes = {};
 
 export default Container;

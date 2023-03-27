@@ -1,0 +1,22 @@
+@import "../../../GlobalStyles/index";
+
+.list--container  {
+  @include grid-container;
+  @include row-gap-very-small;
+  background: $color-secondary;
+  margin-top: 100px;
+  width: 90%;
+}
+
+.list--tile-wrap-up {
+  @extend .col-1-medium;
+  @extend .col-3-very-large;
+  @extend .col-1-small;
+  @extend .col-1-very-small;
+}
+
+.list--list-tile {
+  @include border;
+  @include border-radius-thick;
+  min-height: 180px;
+}
